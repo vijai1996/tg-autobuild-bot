@@ -14,7 +14,7 @@ A telegram bot for automatic building, signing and send android apps from github
 **Tg-autobuild-bot** is a python telegram bot built for easy automatic cloning, building and signing of OpenSource android apps stored on github either on private or public repository. The bot relies on the gradle system for building and signing the app. The bot currently works only on linux but could be made to work for windows too! (PR welcome). A couple of commands is all it takes to command the bot to build the apk and send it to the chat the command was initiated on!
 
 ## Usage
-There is [wiki pages](wiki) to setup the bot and run the bot on any server. If you are still stuck, you can always contact me for further help
+There is [wiki pages](https://github.com/vijai1996/tg-autobuild-bot/wiki) to setup the bot and run the bot on any server. If you are still stuck, you can always contact me for further help
 
 ## Supported Commands
 The list of commands supported by the bot:
