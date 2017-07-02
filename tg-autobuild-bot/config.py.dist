@@ -1,0 +1,12 @@
+#Mandatory variables to be filled
+botapiToken = '' #Telegram bot api token which is obtained from @botfather in telegram
+botUserName = '' #Your telegram bot's username registered with botfather without the initial @. example: mytelegram_bot
+dbuser = '' #Your mysql database's username
+dbpass = '' #Your mysql database's password
+dbhost = '' #Mysql database's host. localhost if on the same server
+dbname = '' #Mysql database name
+dbtablename = '' #Table Name
+
+#Optional variables
+gitusername = '' #Github username
+gitpassword = '' #Github password. Use personal access token generated from your github account settings if 2factor authentication is enabled on the account.
