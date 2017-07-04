@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import logging
 
-import requests
+import requests, os
 from requests.auth import HTTPBasicAuth
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.error import (TelegramError, Unauthorized, BadRequest,
@@ -61,8 +61,12 @@ def start(bot, update, args):
 		"""Check if there is a payload with the start command to send the log in private"""
 		params = args[0].split("_")
 		if params[0] == "sendlog":
-			update.message.reply_text("sending log")
-			sendFile(bot, update.message.chat_id, db.getlogfile(params[1]))
+			logpath = db.getlogfile(params[1])
+			if os.path.isfile(logpath) and os.path.getsize(logpath) > 0:
+				update.message.reply_text("sending log")
+				sendFile(bot, update.message.chat_id, logpath)
+			else:
+				update.message.reply_text("No log found")
 			return
 	update.message.reply_text('Hello World!')
 
